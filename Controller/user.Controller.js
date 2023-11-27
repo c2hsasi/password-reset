@@ -71,7 +71,7 @@ export const loginUser = async (req, res) => {
 
     console.log("PASSWORD MATCH>>", passwordMatch);
 
-    const token = jwt.sign({ _id: user._id }, process.env.SECTERT_KEY);
+    const token = jwt.sign({ _id: user._id }, process.env.SECRET_KEY);
     res.status(200).json({ message: "Login successfully", token: token });
     console.log("*****Token sendinfo from Backend*****", token);
   } catch (error) {

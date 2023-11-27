@@ -13,6 +13,17 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", userRouter);
 
+app.get("/", async (req, res) => {
+  // To Test
+  try {
+    console.log("server working");
+    res.status(200).json({ message: "working" });
+  } catch (error) {
+    console.log(error);
+    res.status(401).json({ message: "error in server side" });
+  }
+});
+
 app.listen(port, () => {
   console.log("app is listening on port>>", port);
 });

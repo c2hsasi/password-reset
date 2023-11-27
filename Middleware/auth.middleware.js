@@ -13,7 +13,7 @@ export const authMiddleware = async (req, res, next) => {
       return res.status(401).json({ message: "Token missing" });
     }
 
-    const decode = jwt.verify(token, process.env.SECTERT_KEY);
+    const decode = jwt.verify(token, process.env.SECRET_KEY);
 
     req.user = decode;
     console.log(req.user);
