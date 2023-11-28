@@ -139,7 +139,6 @@ export const resetPassword = async (req, res) => {
       service: "gmail",
       auth: {
         user: "c2hsasi@gmail.com",
-        // pass: "zysy hnbe lrmu vmpq",
         pass: process.env.PASSWORD,
       },
       tls: {
